@@ -1,19 +1,17 @@
 <template>
-  <div>
-    <nuxt-content :document="page"/>
-  </div>
+  <nuxt-content :document="page" />
 </template>
 
 <script>
 export default {
-   layout: 'cours',
+  layout: 'cours',
   async asyncData({ $content, params }) {
     const classes = params.classes
     const page = await $content(classes).fetch()
 
     return {
-      page
-    };
-  }
-};
+      page,
+    }
+  },
+}
 </script>
