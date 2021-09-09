@@ -5,7 +5,7 @@
         <template slot="title">{{item.title}}</template>
         <el-menu-item v-for="subitem in items.subitems" :key="subitem.index">{{subitem.title}}</el-menu-item>
     </el-submenu> -->
-    <el-menu-item index="/php">Cours</el-menu-item>
+    <el-menu-item index="/php/introduction">Cours</el-menu-item>
     <el-menu-item index="/php/tp">TP</el-menu-item>
 </el-menu>
 </template>

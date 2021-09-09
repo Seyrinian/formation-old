@@ -6,8 +6,10 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const page = await $content('bases').fetch()
+   layout: 'cours',
+  async asyncData({ $content, params }) {
+    const classes = params.classes
+    const page = await $content(classes).fetch()
 
     return {
       page
