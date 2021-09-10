@@ -39,3 +39,13 @@ echo somme($v,8,3); //Affiche 16
 echo somme($v,3); //Affiche 8
 echo somme($v); //Affiche 6
 ```
+
+## Inclusion de script
+
+Afin d'aérer notre code et aussi pour créer des bibliothèques de fonctions il peut être utile de séparer nos scripts en plusieurs. Un script donné pourrait par exemple servir à stocker toutes nos fonctions, et un autre les utiliserait. On appele généralement les scripts stockant des fonctions des bibliothèques.
+
+Si vous avez écris un script lib.php et que vous souhaitez utiliser les fonctions contenues dedans dans votre script run.php alors il faut inclure dans ce dernier le script lib.php de la manière suivante:
+
+```php
+require('lib.php');
+```

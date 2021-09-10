@@ -1,19 +1,21 @@
 <template>
   <div>
     <TPBlock />
-    <nuxt-content :document="page" />
+    <!-- <nuxt-content :document="page" /> -->
   </div>
 </template>
 
+//
 <script>
-export default {
-  layout: 'tp',
-  async asyncData({ $content, params }) {
-    const page = await $content('astuces').fetch()
+// export default {
+//   layout: 'tp',
+//   async asyncData({ $content, params }) {
+//     const page = await $content('astuces').fetch()
 
-    return {
-      page,
-    }
-  },
-}
+//     return {
+//       page,
+//     }
+//   },
+// }
+//
 </script>

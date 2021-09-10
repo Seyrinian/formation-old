@@ -15,3 +15,11 @@ export default {
   },
 }
 </script>
+
+<style>
+h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #3a8ee6;
+}
+</style>
