@@ -26,4 +26,4 @@ C'est la partie qui nous intéresse. Les ordinateurs côté serveurs sont diffé
 
 Dans le cas d'un site dynamique, contrairement au statiques ou le site est envoyé en totalité au client et ce sans dynamisme ou rechargement le site dynamique lui va permettre une certaine interaction. En effet lorsque le client va exécuter des actions précises, comme par exemple valider un formulaire d'inscription, ces informations de connexion vont être envoyé au serveur, être vérifié et une réponse va ensuite être renvoyé côté client pour faire un affichage différent en fonction du cas d'une connexion réussie ou non.
 
-![Relation client serveur](/images/client-server.png)
+![Relation client serveur](./images/client-server.png)

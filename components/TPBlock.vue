@@ -22,6 +22,14 @@
         ></a>
       </el-col>
     </el-row>
-    <el-row><p>Les travaux pratiques sont à rendre</p></el-row>
+    <el-row
+      ><p>
+        Les travaux pratiques sont à rendre sur les dépôts personnels de chaque
+        étudiant à l'adresse suivante:
+        <a href="https://classroom.github.com/a/0IjSWJk4"
+          >https://classroom.github.com/a/0IjSWJk4</a
+        >
+      </p></el-row
+    >
   </div>
 </template>
