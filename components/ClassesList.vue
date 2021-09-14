@@ -14,7 +14,7 @@
       <i class="el-icon-notebook-2"></i>
       <span>Introduction</span>
     </el-menu-item>
-    <el-menu-item index="/php/environnement">
+    <el-menu-item index="/php#préparer-un-environnement-de-travail-correct">
       <i class="el-icon-setting"></i>
       <span>Préparer son environnement</span>
     </el-menu-item>
@@ -52,9 +52,3 @@
     </el-menu-item>
   </el-menu>
 </template>
-
-<style>
-.el-menu {
-  position: fixed;
-}
-</style>
