@@ -1,24 +1,24 @@
-# Formulaires
+# Transmettre des données par un formulaires
 
 Jusqu'ici PHP a permit de manipuler des données sur une application web de manière plus pratique ou automatisée, mais sa vraie force en tant que langage côté serveur vient justement de cette communication. Nous allons créer de l'**intéractivité** client/serveur à travers un formulaire que notre utilisateur pourra remplir. Les données de ce formulaire seront ensuite envoyée au serveur qui pourra les traiter à travers un script établis.
 
 ## Côté HTML
 
-Il faut déjà se concentrer sur la partie HTML. Pour créer un formulaire nous utilisons la balise _<form>_. Cette balise possède deux attributs qui vont être extrêmement important pour définir l'interactivité du formulaire: _method_ et _action_.
+Il faut déjà se concentrer sur la partie HTML. Pour créer un formulaire nous utilisons la balise _**\<form>**_. Cette balise possède deux attributs qui vont être extrêmement important pour définir l'interactivité du formulaire: \_method* et \_action*.
 
 Pour le reste du formulaire vous n'avez qu'à le définir avec les balises habituelles: _select_, _input_, ...
+
+### Action
+
+L'attribut _action_ sert à définir la page que le formulaire va appeler lors de la validation. C'est ce script qui recevra les données et qui devra les traiter. Vous pouvez très bien appeler un autre script.php comme appeler le formulaire lui-même, ce qui implique dans ce cas-là de créer du cdode ré-entrant. Pour débuter il est préférable de séparer le traitement en deux scripts. Dans ce script on pourra accéder aux données du formulaire via les tableaux $\_POST et $\_GET en fonction de ce qui a été défini dans l'attribut _method_.
 
 ### Method
 
 Il existe plusieurs moyens pour envoyer des données au formulaire: la méthode **GET** ou la méthode **POST**.
 
-- get: Les données du formulaires transiterons par l'URL. C'est une méthode assez peu utilisée avec les formulaires que nous détaillerons plus tard dans des situations plus pratiques. En effet on évite de l'utiliser par formulaire car ces derniers ont souvent beaucoup d'informations et il est préférable de limiter la taille de l'url. Les données seront accessibles dans le script php par le tableau _$\_GET_.
+- **get**: Les données du formulaires transiterons par l'URL. C'est une méthode assez peu utilisée avec les formulaires que nous détaillerons plus tard dans des situations plus pratiques. En effet on évite de l'utiliser par formulaire car ces derniers ont souvent beaucoup d'informations et il est préférable de limiter la taille de l'url. Les données seront accessibles dans le script php par le tableau _$\_GET_.
 
-- post: il s'agit de la méthode que vous utilisez dans 95% des cas par formulaires. Les données ne transireont pas par l'url et ne seront pas visible par l'utilisateur. Cette méthode permet d'envoyer autant de données que l'on veut, ce qui fait qu'on la privilégie le plus souvent. Les données seront accessibles dans le script php par le tableau _$\_POST_.
-
-### Action
-
-L'attribut _action_ sert à définir la page que le formulaire va appeler lors de la validation. C'est ce script qui recevra les données et qui devra les traiter. Vous pouvez très bien appeler un autre script.php comme appeler le formulaire lui-même, ce qui implique dans ce cas-là de créer du cdode ré-entrant. Pour débuter il est préférable de séparer le traitement en deux scripts.
+- **post**: il s'agit de la méthode que vous utilisez dans 95% des cas par formulaires. Les données ne transireont pas par l'url et ne seront pas visible par l'utilisateur. Cette méthode permet d'envoyer autant de données que l'on veut, ce qui fait qu'on la privilégie le plus souvent. Les données seront accessibles depuis le script précisé en action par par le tableau _$\_POST_.
 
 ## Côté PHP
 
