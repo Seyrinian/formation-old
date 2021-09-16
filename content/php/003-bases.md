@@ -1,3 +1,5 @@
+<div id="bases">
+
 # Les bases de PHP
 
 ## Types
@@ -121,3 +123,5 @@ for ($i=0; $i<10; $i++){
 ### foreach
 
 Le cas du foreach est une boucle particulière qui est utilisée lors de la manipulation de tableau. Il est détaillée dans la partie Tableaux du cours.
+
+</div>

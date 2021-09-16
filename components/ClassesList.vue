@@ -1,54 +1,117 @@
 <template>
-  <el-menu router default-active="1">
-    <el-menu-item index="/php#accueil">
-      <i class="el-icon-notebook-2"></i>
-      <span>Accueil</span>
-    </el-menu-item>
-    <el-divider></el-divider>
-    <el-menu-item index="/php#tp">
-      <i class="el-icon-notebook-2"></i>
-      <span>Travaux pratique</span>
-    </el-menu-item>
-    <el-divider></el-divider>
-    <el-menu-item index="/php/introduction">
-      <i class="el-icon-notebook-2"></i>
-      <span>Introduction</span>
-    </el-menu-item>
-    <el-menu-item index="/php#préparer-un-environnement-de-travail-correct">
-      <i class="el-icon-setting"></i>
-      <span>Préparer son environnement</span>
-    </el-menu-item>
-    <el-menu-item index="/php#les-bases-de-php">
-      <i class="el-icon-notebook-1"></i>
-      <span>Les bases de PHP</span>
-    </el-menu-item>
-    <el-menu-item index="/php/tableaux">
-      <i class="el-icon-notebook-1"></i>
-      <span>Tableaux</span>
-    </el-menu-item>
-    <el-menu-item index="/php/fonctions">
-      <i class="el-icon-notebook-1"></i>
-      <span>Fonctions</span>
-    </el-menu-item>
-    <el-menu-item index="/php/formulaires">
-      <i class="el-icon-notebook-1"></i>
-      <span>Transmettre les données par un formulaire</span>
-    </el-menu-item>
-    <el-menu-item index="/php/url">
-      <i class="el-icon-notebook-1"></i>
-      <span>Transmettre les données par l'URL</span>
-    </el-menu-item>
-    <el-menu-item index="/php/bdd">
-      <i class="el-icon-notebook-1"></i>
-      <span>SGBD et manipulation de données</span>
-    </el-menu-item>
-    <el-menu-item index="/php/pdo">
-      <i class="el-icon-notebook-1"></i>
-      <span>PDO et requêtes préparées</span>
-    </el-menu-item>
-    <el-menu-item index="/php/mvc">
-      <i class="el-icon-notebook-1"></i>
-      <span>MVC</span>
-    </el-menu-item>
-  </el-menu>
+  <v-list id="side-menu" nav dense two-line shaped>
+    <v-list-item to="#accueil">
+      <v-icon>mdi-home</v-icon>
+      <v-list-item-content
+        ><v-list-item-title>Accueil</v-list-item-title></v-list-item-content
+      >
+    </v-list-item>
+    <v-divider></v-divider>
+    <v-list-item to="#tp-list">
+      <v-icon>mdi-tools</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >Travaux pratique</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-divider></v-divider>
+    <v-list-item to="#intro">
+      <v-icon>mdi-door-open</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >Introduction</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#environnement">
+      <v-icon>mdi-file-code</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >Préparer son environnement</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#bases">
+      <v-icon>mdi-language-php</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >Les bases de PHP</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#tableaux">
+      <v-icon>mdi-code-array</v-icon>
+      <v-list-item-content
+        ><v-list-item-title>Tableaux</v-list-item-title></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#fonctions">
+      <v-icon>mdi-function</v-icon>
+      <v-list-item-content
+        ><v-list-item-title>Fonctions</v-list-item-title></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#formulaires">
+      <v-icon>mdi-form-select</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >Transmettre les données par un formulaire</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#url">
+      <v-icon>mdi-notebook</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >Transmettre les données par l'URL</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#bdd">
+      <v-icon>mdi-database</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >SGBD et manipulation de données</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#pdo">
+      <v-icon>mdi-database</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >PDO et requêtes préparées</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
+    <v-list-item to="#mvc">
+      <v-icon>mdi-ruler-square</v-icon>
+      <v-list-item-content
+        ><v-list-item-title>MVC</v-list-item-title></v-list-item-content
+      >
+    </v-list-item>
+  </v-list>
 </template>
+
+<style lang="scss">
+@import '../assets/sass/custom-variables.scss';
+
+#side-menu {
+  background-color: $--php-color-2;
+}
+
+.v-list {
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.v-list::-webkit-scrollbar {
+  display: none;
+}
+</style>

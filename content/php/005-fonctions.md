@@ -1,3 +1,5 @@
+<div id="fonctions">
+
 # Fonctions
 
 Comme le langage C, PHP ne distingue pas les fonctions et les procédures. Une procédure est un cas particulier de fonction qui ne retourne aucun paramètre. Le mot clef « function » est nécessaire dans la déclaration. Les arguments de la fonction sont passés entre parenthèse. La valeur de retour est unique et déclenchée par un « return ».
@@ -49,3 +51,5 @@ Si vous avez écris un script lib.php et que vous souhaitez utiliser les fonctio
 ```php
 require('lib.php');
 ```
+
+</div>

@@ -1,6 +1,8 @@
 <template>
-  <el-container>
-    <el-aside><ClassesList /></el-aside>
-    <el-main><Nuxt /></el-main>
-  </el-container>
+  <v-app dark>
+    <v-navigation-drawer app permanent expand-on-hover
+      ><ClassesList
+    /></v-navigation-drawer>
+    <v-main><Nuxt /></v-main>
+  </v-app>
 </template>

@@ -1,4 +1,6 @@
-# Transmettre des données par un formulaires
+<div id="formulaires">
+
+# Transmettre des données par un formulaire
 
 Jusqu'ici PHP a permit de manipuler des données sur une application web de manière plus pratique ou automatisée, mais sa vraie force en tant que langage côté serveur vient justement de cette communication. Nous allons créer de l'**intéractivité** client/serveur à travers un formulaire que notre utilisateur pourra remplir. Les données de ce formulaire seront ensuite envoyée au serveur qui pourra les traiter à travers un script établis.
 
@@ -57,3 +59,4 @@ Lorsque l'on parle de formulaire, il y a un aspect important à prendre en compt
 ```
 
 - De ce point découle le suivant: vérifiez constemment les données que vous recevez du côté de votre script. Testez chaque champs reçu: est-il du type attendu ? de la forme voulu ? ....
+</div>

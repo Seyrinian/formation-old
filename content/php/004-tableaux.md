@@ -1,4 +1,6 @@
-# Les tableaux
+<div id="tableaux">
+
+# Tableaux
 
 La manipulation des tableaux en PHP est grandement facilité par la souplesse d’utilisation des variables : pas de déclaration, type non figé et déterminé automatiquement.
 
@@ -128,3 +130,5 @@ echo "<tr><th>$espece</th><td>$race</td></tr>";
 **print_r**: Permet d'afficher rapidement et efficacement un tableau à la manière d'_echo_ ou _var_dump_.
 **in_array($valeur, $tableau)**: Indique si la valeur renseignée et contenu dans le tableau.
 **array_key_exists($key, $tableau)**: Indique si l'indice renseignée et contenu dans le tableau.
+
+</div>

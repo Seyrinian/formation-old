@@ -1,3 +1,5 @@
+<div id="environnement">
+
 # Préparer un environnement de travail correct
 
 Afin de travailler correctement dans ce module il est préférable d'avoir un environnement de travail correct. Ci-dessous vous trouverez une liste des outils permettant le développement d'un projet PHP dans de bonnes conditions. Il existe évidemment différents autres logiciels semblables. Vous pouvez utilisez ce que bon vous semble mais votre intervenant utilisera les suivants: ce qui permettra d'éviter de perdre du temps en configurations fastidieuses de logiciels tiers.
@@ -37,3 +39,5 @@ Afin de stocker votre code et pour faciliter la correction il est préférable d
 Installez d'abord Git sur votre ordinateur puis poussez votre code sur le dépôt distant de votre compte GitHub que vous passerez en public afin qu'il soit accessible.
 [Télécharger GIT](https://git-scm.com/downloads)
 [Accéder à GitHub](https://github.com/)
+
+</div>

@@ -1,0 +1,10 @@
+// php variables
+$--php-color-1: #312450 !default;
+$--php-color-2: #5e42a6 !default;
+$--php-color-3: #b74e91 !default;
+
+:export {
+  phpPrimaryColor:$--php-color-1;
+phpSecondaryColor:$--php-color-2;
+phpTertiaryColor:$--php-color-3;
+}
