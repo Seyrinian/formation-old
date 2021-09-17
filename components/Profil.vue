@@ -1,6 +1,6 @@
 <template>
   <v-container id="header" fluid>
-    <v-row height="100%">
+    <v-row>
       <v-col cols="10" dense>
         <h1>Programmation orientée côté serveur</h1>
         <h2>FOURNY Valentin</h2>
@@ -18,6 +18,8 @@
 #header {
   background-color: $--php-color-1;
   height: 100vh;
+  padding-top: 30vh;
+  padding-left: 10vh;
 }
 
 h1 {
