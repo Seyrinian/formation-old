@@ -30,4 +30,6 @@ Dans le cas d'un site dynamique, contrairement au statiques ou le site est envoy
 
 ![Relation client serveur](./images/client-server.png)
 
+---
+
 </div>

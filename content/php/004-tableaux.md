@@ -131,4 +131,6 @@ echo "<tr><th>$espece</th><td>$race</td></tr>";
 **in_array($valeur, $tableau)**: Indique si la valeur renseignée et contenu dans le tableau.
 **array_key_exists($key, $tableau)**: Indique si l'indice renseignée et contenu dans le tableau.
 
+---
+
 </div>

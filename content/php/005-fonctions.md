@@ -52,4 +52,6 @@ Si vous avez écris un script lib.php et que vous souhaitez utiliser les fonctio
 require('lib.php');
 ```
 
+---
+
 </div>

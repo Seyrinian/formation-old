@@ -40,4 +40,6 @@ Installez d'abord Git sur votre ordinateur puis poussez votre code sur le dépô
 [Télécharger GIT](https://git-scm.com/downloads)
 [Accéder à GitHub](https://github.com/)
 
+---
+
 </div>

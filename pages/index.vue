@@ -37,4 +37,15 @@ export default {
 #classes-content {
   background-color: $--php-color-1;
 }
+.nuxt-content h1 {
+  text-align: center;
+}
+
+.nuxt-content h1 {
+  font-size: 36px;
+}
+
+.nuxt-content h2 {
+  font-size: 24px;
+}
 </style>

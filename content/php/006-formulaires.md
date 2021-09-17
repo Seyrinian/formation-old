@@ -59,4 +59,7 @@ Lorsque l'on parle de formulaire, il y a un aspect important à prendre en compt
 ```
 
 - De ce point découle le suivant: vérifiez constemment les données que vous recevez du côté de votre script. Testez chaque champs reçu: est-il du type attendu ? de la forme voulu ? ....
+
+---
+
 </div>
