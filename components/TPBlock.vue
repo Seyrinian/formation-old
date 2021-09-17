@@ -7,19 +7,34 @@
         </v-row>
         <v-row>
           <v-col>
-            <v-btn class="ma-2" href="/download/TP0.pdf" download large>
+            <v-btn
+              class="ma-2"
+              href="/vacation/download/TP0.pdf"
+              download
+              large
+            >
               <v-icon left> mdi-cloud-download </v-icon>
               Introduction: Exercices de découverte
             </v-btn>
-            <v-btn class="ma-2" href="/download/TP1.pdf" download large>
+            <v-btn
+              class="ma-2"
+              href="/vacation/download/TP1.pdf"
+              download
+              large
+            >
               <v-icon left> mdi-cloud-download </v-icon>
               TP1: Manipulation de tableaux et de formulaires
             </v-btn>
-            <v-btn class="ma-2" href="/download/TP2.pdf" download large>
+            <v-btn
+              class="ma-2"
+              href="/vacation/download/TP2.pdf"
+              download
+              large
+            >
               <v-icon left> mdi-cloud-download </v-icon>
               TP2: Fonctions en PHP
             </v-btn>
-            <v-btn class="ma-2" href="/download/TP3.pdf" download large
+            <v-btn class="ma-2" href="/vacation/download/TP3.pdf" download large
               ><v-icon left> mdi-cloud-download </v-icon>
               TP3: Interaction avec la BDD
             </v-btn>
