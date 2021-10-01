@@ -38,6 +38,18 @@
               ><v-icon left> mdi-cloud-download </v-icon>
               TP3: Interaction avec la BDD
             </v-btn>
+            <v-btn class="ma-2" href="/vacation/download/TP4.pdf" download large
+              ><v-icon left> mdi-cloud-download </v-icon>
+              TP4: Projet Rating - Partie 1
+            </v-btn>
+            <v-btn class="ma-2" href="/vacation/download/TP5.pdf" download large
+              ><v-icon left> mdi-cloud-download </v-icon>
+              TP5: Projet Rating - Partie 2
+            </v-btn>
+            <v-btn class="ma-2" href="/vacation/download/TP6.pdf" download large
+              ><v-icon left> mdi-cloud-download </v-icon>
+              TP6: Projet Rating - Partie 3
+            </v-btn>
           </v-col>
         </v-row>
         <v-divider></v-divider>
