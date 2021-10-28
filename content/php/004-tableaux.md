@@ -1,10 +1,16 @@
-<div id="tableaux">
+---
+title: Tableaux
+icon: mdi-code-array
+link: arrays
+---
 
-# Tableaux
+<div id='arrays'></div>
+
+## Tableaux
 
 La manipulation des tableaux en PHP est grandement facilité par la souplesse d’utilisation des variables : pas de déclaration, type non figé et déterminé automatiquement.
 
-## Tableaux numérotés
+### Tableaux numérotés
 
 **Exemple de tableau réalisable**
 | indices | $tab |
@@ -24,7 +30,7 @@ Dans l'exemple ci-dessus nous avons affaire à un tableau numérotés. C'est à 
 
 Pour créer un tableau numérotés il existe plusieurs manières:
 
-### Manuellement
+#### Manuellement
 
 ```php
 $tab[0] = 'Valentin'
@@ -40,7 +46,7 @@ $tab[] = 'François' // [1]
 $tab[] = 'Marine' // [2]
 ```
 
-### Fonction array
+#### Fonction array
 
 La meilleure manière reste cependant la fonction array:
 
@@ -48,7 +54,7 @@ La meilleure manière reste cependant la fonction array:
 $tab= array('Valentin','François','Marine')
 ```
 
-## Tableaux associatifs
+### Tableaux associatifs
 
 Nous avons parlé de tableaux numérotés pour faciliter la compréhension, cependant en réalités tous les tableaux en PHP sont dis associatifs. C'est à dire que leurs index (numériques par défaut) peuvent aussi être remplacés par des chaînes de caractères:
 
@@ -77,7 +83,7 @@ $ventes['février']=1230
 $ventes['mars']=3140
 ```
 
-## Parcourir les tableaux
+### Parcourir les tableaux
 
 Dans le cas de tableaux numérotés on peut le parcourir facilement avec des boucles for ou while comme dans la plupart des autres langages similaires.
 
@@ -95,7 +101,7 @@ for ($numero = 0; $numero < 5; $numero++)
 Mais le problème devient plus complexe avec les tableaux associatifs. En effet ces derniers n'ayant pas d'indices numérotés il peut sembler difficile voire impossible d'itérer sur chacun de leurs indices.
 Ce problème est réglé avec l'instruction **_foreach_**.
 
-### Forme simplifiée
+#### Forme simplifiée
 
 **foreach** dans sa forme la plus simple permet d'accéder à la variable contenu dans chaque indice du tableau: _foreach ( var_tableau as var_element_du tableau){...}_.
 On passe en paramètre le tableau et on associe à une variable le pas de chaque tableau afin d'y accéder.
@@ -106,7 +112,7 @@ echo $mois. ',' ;
 }
 ```
 
-### Forme complète
+#### Forme complète
 
 La forme complète permet aussi d'accéder à l'indice (ou clé) de chaque élément: _foreach ( var_tableau as var_index => var_element_du tableau){...}_.
 Prenons notre tableau deu début:
@@ -124,7 +130,7 @@ echo "<tr><th>$espece</th><td>$race</td></tr>";
 }
 ```
 
-## Quelques fonctions utiles:
+### Quelques fonctions utiles:
 
 **count($tab)**: Permet de connaître le nombre d'éléments d'un tableau.
 **print_r**: Permet d'afficher rapidement et efficacement un tableau à la manière d'_echo_ ou _var_dump_.

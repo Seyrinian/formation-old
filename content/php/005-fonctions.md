@@ -1,10 +1,16 @@
-<div id="fonctions">
+---
+title: Fonctions
+icon: mdi-function
+link: functions
+---
 
-# Fonctions
+<div id='functions'></div>
+
+## Fonctions
 
 Comme le langage C, PHP ne distingue pas les fonctions et les procédures. Une procédure est un cas particulier de fonction qui ne retourne aucun paramètre. Le mot clef « function » est nécessaire dans la déclaration. Les arguments de la fonction sont passés entre parenthèse. La valeur de retour est unique et déclenchée par un « return ».
 
-## Déclaration
+### Déclaration
 
 function nom_fonction([$argument[=val_defaut]][,...]){
 instruction ;
@@ -26,7 +32,7 @@ $result=somme($v,8) ;
 echo $result ; //Affiche 13
 ```
 
-## Caractéristique
+### Caractéristiques
 
 La principale innovation est la possibilité d'utiliser des valeurs d'arguments par défaut. Lorsqu'ils sont utilisées, les arguments avec une valeur par défaut doivent être situés en fin de liste. Si un argument en fin de liste doit être spécifié, ceux qui le précèdent ne pourront pas utiliser la valeur par défaut.
 
@@ -42,7 +48,7 @@ echo somme($v,3); //Affiche 8
 echo somme($v); //Affiche 6
 ```
 
-## Inclusion de script
+### Inclusion de script
 
 Afin d'aérer notre code et aussi pour créer des bibliothèques de fonctions il peut être utile de séparer nos scripts en plusieurs. Un script donné pourrait par exemple servir à stocker toutes nos fonctions, et un autre les utiliserait. On appele généralement les scripts stockant des fonctions des bibliothèques.
 

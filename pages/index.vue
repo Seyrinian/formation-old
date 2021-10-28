@@ -1,51 +1,37 @@
 <template>
   <v-row>
-    <v-col>
-      <Profil />
-      <TPBlock />
-      <!-- <ClassesBlock /> -->
-      <v-container id="classes-content" fluid>
-        <v-row justify="center">
-          <v-col cols="10">
-            <nuxt-content
-              v-for="page in pages"
-              :key="page.slug"
-              :document="page"
-            />
-          </v-col>
-        </v-row>
-      </v-container>
-      <BackToTop />
-    </v-col>
-  </v-row>
+    <v-col v-for="(item, i) in items" :key="i" cols="6">
+      <v-card :color="item.color" :to="item.to">
+        <v-avatar>
+          <v-icon x-large>{{ item.icon }}</v-icon>
+        </v-avatar>
+        <v-card-title class="text-h5" v-text="item.title"></v-card-title>
+        <v-card-subtitle v-text="item.description"></v-card-subtitle>
+      </v-card> </v-col
+  ></v-row>
 </template>
 
 <script>
 export default {
-  layout: 'cours',
-  async asyncData({ $content }) {
-    const pages = await $content('php').sortBy('slug', 'asc').fetch()
-    return {
-      pages,
-    }
-  },
+  data: () => ({
+    items: [
+      {
+        color: '#787CB5',
+        icon: 'mdi-language-php',
+        title: 'PHP',
+        to: '/php',
+        description:
+          "Section dédiée à l'apprentissage et la pratique du PHP. Contient notamment les TP et leur dépôt.",
+      },
+      {
+        color: '#FFA500',
+        icon: 'mdi-language-javascript',
+        title: 'Javascript',
+        to: '/javascript',
+        description:
+          "Section dédiée à l'apprentissage et la pratique du Javascript. Contient notamment les TP et leur dépôt.",
+      },
+    ],
+  }),
 }
 </script>
-
-<style lang="scss">
-@import '../assets/sass/custom-variables.scss';
-#classes-content {
-  background-color: $--php-color-1;
-}
-.nuxt-content h1 {
-  text-align: center;
-}
-
-.nuxt-content h1 {
-  font-size: 36px;
-}
-
-.nuxt-content h2 {
-  font-size: 24px;
-}
-</style>

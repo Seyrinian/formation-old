@@ -10,7 +10,8 @@
               x-large
               ><v-icon left> mdi-github </v-icon> Dépôt de remise des TP
             </v-btn></v-col
-          ></v-row>
+          ></v-row
+        >
         <v-divider></v-divider>
         <v-row>
           <v-col> <h1>Travaux pratiques</h1></v-col>
@@ -63,7 +64,7 @@
           </v-col>
         </v-row>
         <v-divider></v-divider>
-         <v-row>
+        <v-row>
           <v-col> <h1>Corrections</h1></v-col>
         </v-row>
         <v-row>

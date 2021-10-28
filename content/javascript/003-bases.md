@@ -1,14 +1,8 @@
----
-title: Les bases
-icon: mdi-language-php
-link: bases
----
+<div id="bases">
 
-<div id='bases'></div>
+# Les bases de PHP
 
-## Les bases de PHP
-
-### Types
+## Types
 
 Voici les principaux types qui compose les variables PHP:
 
@@ -17,7 +11,7 @@ Voici les principaux types qui compose les variables PHP:
 - Booléens (bool): Permet de stocker une valeur vraie ou fausse.
 - Chaîne de caractères (string): Il s'agit de texte brut.
 
-### Variables
+## Variables
 
 Une variable commence systématiquement par l'identificateur **$**. Par exemple la variable booléenne permettant de savoir si une forme est un carré ou non sera _$carré=true_
 
@@ -30,11 +24,11 @@ Votre variable sera visible dans le script entier. Si vous l'utilisez dans une f
 
 Des mots-clés et utilisations plus poussées des variables peuvent-être fait à travers des mots-clés comme _global_ et _static_. Pour plus d'informations référez-vous à la [documentation](https://www.php.net/manual/fr/language.variables.scope.php).
 
-### Conditions
+## Conditions
 
 Comme dans de nombreux langages on retrouve les instructions de bases permettant de gérer les conditions:
 
-#### If... else
+### If... else
 
 Il existe plusieurs moyens d'écrire des conditions en PHP, la plus basique et la plus connue reste le _if... else_
 
@@ -45,7 +39,7 @@ if(true){
 
 ```
 
-#### Switch
+### Switch
 
 Le switch permet de gérer des cas précis d'utilisations ainsi qu'un cas par défaut. Son principal avantage consiste à éviter l'imbrication de if en chaîne.
 
@@ -60,7 +54,7 @@ switch($maVariable){
 
 ```
 
-#### Conditions ternaires
+### Conditions ternaires
 
 La condition ternaire est une syntaxe de condition particulière qui permet de raccourcir la manière dont on l'écrit. Elle est moins courante que les deux autres syntaxes mais il reste intéressant de savoir l'utiliser:
 
@@ -83,11 +77,11 @@ $resultat = $maVariable ? "Ceci est vrai" : "Ceci est faux"
 La structure est donc la suivante:
 CONDITION ? ALORS : SINON
 
-### Boucles
+## Boucles
 
 Les boucles permettent de répéter des instructions, et sont accessibles aussi en PHP comme dans de nombreux autres langages.
 
-#### While
+### While
 
 **While** est la boucle qui permet d'exécuter des instructions du type _Tant que ma condition alors j'exécute_/
 
@@ -98,7 +92,7 @@ while ($condition === true){
 
 ```
 
-#### Do-While
+### Do-While
 
 La forme Do-While est presque similaire au while avec une légère différence d'écriture. On teste l'expression en fin d'itération plutôt qu'au début. Ce qui implique que quelque soit l'état de la condition testée (vraie ou fausse) on exécutera au moins une fois la boucle.
 
@@ -109,7 +103,7 @@ do {
 
 ```
 
-#### For
+### For
 
 For est un autre type de boucle, qui est similaire à while. Dans la plupart des cas on peut choisir l'un ou l'autre, mais lorsque vous avez besoin d'incrémenter un compteur, ou de savoir exactement le nombre de pas que vous allez faire dans la boucle for est plus indiqué. En effet l'incrémation du compteur est obligatoire et automatique dans le for, ce qui n'est pas le cas du while ou il faut en déclarer un et l'incrémenter.
 
@@ -126,7 +120,7 @@ for ($i=0; $i<10; $i++){
 
 ```
 
-#### foreach
+### foreach
 
 Le cas du foreach est une boucle particulière qui est utilisée lors de la manipulation de tableau. Il est détaillée dans la partie Tableaux du cours.
 

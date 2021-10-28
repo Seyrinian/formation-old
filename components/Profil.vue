@@ -2,7 +2,7 @@
   <v-container id="header" fluid>
     <v-row>
       <v-col cols="10" dense>
-        <h1>Programmation orientée côté serveur</h1>
+        <h1>{{ adaptHeading }}</h1>
         <h2>FOURNY Valentin</h2>
         <v-btn href="mailto:fourny.valentin@gmail.com" type="primary"
           >Contacter l'enseignant</v-btn
@@ -11,6 +11,39 @@
     </v-row>
   </v-container>
 </template>
+
+<script>
+export default {
+  props: {
+    module: { type: String, default: '' },
+  },
+  data() {
+    return {
+      heading: {
+        type: String,
+        default: '',
+      },
+    }
+  },
+  computed: {
+    adaptHeading() {
+      let heading = ''
+      switch (this.module) {
+        case 'php':
+          heading = 'Programmation orientée côté serveur'
+          break
+        case 'javascript':
+          heading = 'Programmation orientée côté client'
+          break
+        default:
+          heading = ''
+          break
+      }
+      return heading
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 @import '../assets/sass/custom-variables.scss';
