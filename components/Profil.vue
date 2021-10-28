@@ -1,5 +1,5 @@
 <template>
-  <v-container id="header" fluid>
+  <v-container id="header" :class="module" fluid>
     <v-row>
       <v-col cols="10" dense>
         <h1>{{ adaptHeading }}</h1>
@@ -13,19 +13,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  props: {
-    module: { type: String, default: '' },
-  },
-  data() {
-    return {
-      heading: {
-        type: String,
-        default: '',
-      },
-    }
-  },
   computed: {
+    ...mapGetters({ module: 'getModule' }),
     adaptHeading() {
       let heading = ''
       switch (this.module) {
@@ -48,8 +39,11 @@ export default {
 <style lang="scss">
 @import '../assets/sass/custom-variables.scss';
 
-#header {
+#header.php {
   background-color: $--php-color-1;
+}
+
+#header {
   height: 100vh;
   padding-top: 30vh;
   padding-left: 10vh;

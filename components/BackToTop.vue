@@ -14,14 +14,31 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import variables from '../assets/sass/custom-variables.scss'
 
 export default {
   data: () => ({
     fab: false,
-    color: variables.phpTertiaryColor,
   }),
-
+  computed: {
+    ...mapGetters({ module: 'getModule' }),
+    color() {
+      let color = ''
+      switch (this.module) {
+        case 'php':
+          color = variables.phpTertiaryColor
+          break
+        case 'javascript':
+          color = variables.javascriptPrimaryColor
+          break
+        default:
+          color = ''
+          break
+      }
+      return color
+    },
+  },
   methods: {
     onScroll(e) {
       if (typeof window === 'undefined') return
@@ -34,10 +51,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-@import '../assets/sass/custom-variables.scss';
-.v-btn {
-  background-color: $--php-color-3;
-}
-</style>

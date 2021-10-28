@@ -6,3 +6,8 @@ $--php-color-3: #b0b3d6 !default;
 // javascript variables
 $--javascript-color-1: #f0db4f !default;
 $--javascript-color-2: #323330 !default;
+
+:export {
+  javascriptPrimaryColor: $--javascript-color-1;
+  phpTertiaryColor: $--php-color-3;
+}

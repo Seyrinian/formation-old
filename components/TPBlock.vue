@@ -1,17 +1,7 @@
 <template>
-  <v-container id="tp-list" fluid>
+  <v-container id="tp-list" :class="module" fluid>
     <v-row justify="center">
       <v-col cols="10">
-        <v-row justify="center"
-          ><v-col cols="4"
-            ><v-btn
-              class="ma-2"
-              href="https://classroom.github.com/a/0IjSWJk4"
-              x-large
-              ><v-icon left> mdi-github </v-icon> Dépôt de remise des TP
-            </v-btn></v-col
-          ></v-row
-        >
         <v-divider></v-divider>
         <v-row>
           <v-col> <h1>Travaux pratiques</h1></v-col>
@@ -103,9 +93,18 @@
   </v-container>
 </template>
 
+<script>
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters({ pages: 'getPages', module: 'getModule' }),
+  },
+}
+</script>
+
 <style lang="scss">
 @import '../assets/sass/custom-variables.scss';
-#tp-list {
+#tp-list.php {
   background-color: $--php-color-3;
 }
 </style>
