@@ -14,13 +14,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  props: {
-    module: {
-      type: String,
-      default: '',
-    },
-  },
   data: () => ({
     items: {
       php: [
@@ -61,6 +56,9 @@ export default {
       javascript: {},
     },
   }),
+  computed: {
+    ...mapGetters({ module: 'getModule' }),
+  },
 }
 </script>
 
