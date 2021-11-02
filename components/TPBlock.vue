@@ -2,7 +2,6 @@
   <v-container id="tp-list" :class="module" fluid>
     <v-row justify="center">
       <v-col cols="10">
-        <v-divider></v-divider>
         <v-row>
           <v-col> <h1>Travaux pratiques</h1></v-col>
         </v-row>
@@ -105,6 +104,6 @@ export default {
 <style lang="scss">
 @import '../assets/sass/custom-variables.scss';
 #tp-list.php {
-  background-color: $--php-color-3;
+  background-color: $--php-color-2;
 }
 </style>

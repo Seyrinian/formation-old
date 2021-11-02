@@ -2,7 +2,7 @@
   <v-container id="useful-links" fluid>
     <v-row justify="center">
       <v-col v-for="(item, i) in items[module]" :key="i" cols="5">
-        <v-card :href="item.link">
+        <v-card :color="color" :href="item.link">
           <v-avatar>
             <v-icon x-large>{{ item.icon }}</v-icon>
           </v-avatar>
@@ -15,6 +15,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import variables from '../assets/sass/custom-variables.scss'
+
 export default {
   data: () => ({
     items: {
@@ -58,11 +60,30 @@ export default {
   }),
   computed: {
     ...mapGetters({ module: 'getModule' }),
+    color() {
+      let color = ''
+      switch (this.module) {
+        case 'php':
+          color = variables.phpPrimaryColor
+          break
+        case 'javascript':
+          color = variables.javascriptPrimaryColor
+          break
+        default:
+          color = ''
+          break
+      }
+      return color
+    },
   },
 }
 </script>
 
-<style lang="sass">
-#useful-links
-  height: 100vh
+<style lang="scss">
+@import '../assets/sass/custom-variables.scss';
+
+#useful-links {
+  height: 100vh;
+  background-color: $--php-color-3;
+}
 </style>
