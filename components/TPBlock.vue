@@ -9,7 +9,7 @@
           <v-col>
             <v-btn
               class="ma-2"
-              href="/vacation/download/TP0.pdf"
+              href="/formation/download/TP0.pdf"
               download
               large
             >
@@ -18,7 +18,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/vacation/download/TP1.pdf"
+              href="/formation/download/TP1.pdf"
               download
               large
             >
@@ -27,26 +27,42 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/vacation/download/TP2.pdf"
+              href="/formation/download/TP2.pdf"
               download
               large
             >
               <v-icon left> mdi-cloud-download </v-icon>
               TP2: Fonctions en PHP
             </v-btn>
-            <v-btn class="ma-2" href="/vacation/download/TP3.pdf" download large
+            <v-btn
+              class="ma-2"
+              href="/formation/download/TP3.pdf"
+              download
+              large
               ><v-icon left> mdi-cloud-download </v-icon>
               TP3: Interaction avec la BDD
             </v-btn>
-            <v-btn class="ma-2" href="/vacation/download/TP4.pdf" download large
+            <v-btn
+              class="ma-2"
+              href="/formation/download/TP4.pdf"
+              download
+              large
               ><v-icon left> mdi-cloud-download </v-icon>
               TP4: Projet Rating - Partie 1
             </v-btn>
-            <v-btn class="ma-2" href="/vacation/download/TP5.pdf" download large
+            <v-btn
+              class="ma-2"
+              href="/formation/download/TP5.pdf"
+              download
+              large
               ><v-icon left> mdi-cloud-download </v-icon>
               TP5: Projet Rating - Partie 2
             </v-btn>
-            <v-btn class="ma-2" href="/vacation/download/TP6.pdf" download large
+            <v-btn
+              class="ma-2"
+              href="/formation/download/TP6.pdf"
+              download
+              large
               ><v-icon left> mdi-cloud-download </v-icon>
               TP6: Projet Rating - Partie 3
             </v-btn>
@@ -60,7 +76,7 @@
           <v-col>
             <v-btn
               class="ma-2"
-              href="/vacation/corrections/TP0.zip"
+              href="/formation/corrections/TP0.zip"
               download
               large
             >
@@ -69,7 +85,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/vacation/corrections/TP1.zip"
+              href="/formation/corrections/TP1.zip"
               download
               large
             >
@@ -78,7 +94,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/vacation/corrections/TP2.zip"
+              href="/formation/corrections/TP2.zip"
               download
               large
             >
