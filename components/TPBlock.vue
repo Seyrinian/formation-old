@@ -9,7 +9,7 @@
           <v-col>
             <v-btn
               class="ma-2"
-              href="/formation/download/TP0.pdf"
+              href="/formation/php/download/TP0.pdf"
               download
               large
             >
@@ -18,7 +18,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/download/TP1.pdf"
+              href="/formation/php/download/TP1.pdf"
               download
               large
             >
@@ -27,7 +27,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/download/TP2.pdf"
+              href="/formation/php/download/TP2.pdf"
               download
               large
             >
@@ -36,7 +36,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/download/TP3.pdf"
+              href="/formation/php/download/TP3.pdf"
               download
               large
               ><v-icon left> mdi-cloud-download </v-icon>
@@ -44,7 +44,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/download/TP4.pdf"
+              href="/formation/php/download/TP4.pdf"
               download
               large
               ><v-icon left> mdi-cloud-download </v-icon>
@@ -52,7 +52,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/download/TP5.pdf"
+              href="/formation/php/download/TP5.pdf"
               download
               large
               ><v-icon left> mdi-cloud-download </v-icon>
@@ -60,7 +60,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/download/TP6.pdf"
+              href="/formation/php/download/TP6.pdf"
               download
               large
               ><v-icon left> mdi-cloud-download </v-icon>
@@ -76,7 +76,7 @@
           <v-col>
             <v-btn
               class="ma-2"
-              href="/formation/corrections/TP0.zip"
+              href="/formation/php/corrections/TP0.zip"
               download
               large
             >
@@ -85,7 +85,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/corrections/TP1.zip"
+              href="/formation/php/corrections/TP1.zip"
               download
               large
             >
@@ -94,7 +94,7 @@
             </v-btn>
             <v-btn
               class="ma-2"
-              href="/formation/corrections/TP2.zip"
+              href="/formation/php/corrections/TP2.zip"
               download
               large
             >
