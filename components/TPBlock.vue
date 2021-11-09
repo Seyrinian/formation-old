@@ -8,101 +8,39 @@
         <v-row>
           <v-col>
             <v-btn
+              v-for="download in downloads"
+              :key="download.title"
               class="ma-2"
-              href="/formation/download/php/TP0.pdf"
+              :href="'/formation/download/' + download.link"
               download
               large
             >
               <v-icon left> mdi-cloud-download </v-icon>
-              Introduction: Exercices de découverte
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/download/php/TP1.pdf"
-              download
-              large
-            >
-              <v-icon left> mdi-cloud-download </v-icon>
-              TP1: Manipulation de tableaux et de formulaires
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/download/php/TP2.pdf"
-              download
-              large
-            >
-              <v-icon left> mdi-cloud-download </v-icon>
-              TP2: Fonctions en PHP
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/download/php/TP3.pdf"
-              download
-              large
-              ><v-icon left> mdi-cloud-download </v-icon>
-              TP3: Interaction avec la BDD
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/download/php/TP4.pdf"
-              download
-              large
-              ><v-icon left> mdi-cloud-download </v-icon>
-              TP4: Projet Rating - Partie 1
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/download/php/TP5.pdf"
-              download
-              large
-              ><v-icon left> mdi-cloud-download </v-icon>
-              TP5: Projet Rating - Partie 2
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/download/php/TP6.pdf"
-              download
-              large
-              ><v-icon left> mdi-cloud-download </v-icon>
-              TP6: Projet Rating - Partie 3
+              {{ download.title }}
             </v-btn>
           </v-col>
         </v-row>
         <v-divider></v-divider>
-        <v-row>
-          <v-col> <h1>Corrections</h1></v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <v-btn
-              class="ma-2"
-              href="/formation/corrections/TP0.zip"
-              download
-              large
-            >
-              <v-icon left> mdi-folder-zip </v-icon>
-              Introduction: Exercices de découverte
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/corrections/TP1.zip"
-              download
-              large
-            >
-              <v-icon left> mdi-folder-zip </v-icon>
-              TP1: Manipulation de tableaux et de formulaires
-            </v-btn>
-            <v-btn
-              class="ma-2"
-              href="/formation/corrections/TP2.zip"
-              download
-              large
-            >
-              <v-icon left> mdi-folder-zip </v-icon>
-              TP2: Fonctions en PHP
-            </v-btn>
-          </v-col>
-        </v-row>
+        <div v-if="correctionsActive">
+          <v-row>
+            <v-col> <h1>Corrections</h1></v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-btn
+                v-for="correction in corrections"
+                :key="correction.title"
+                class="ma-2"
+                :href="'/formation/corrections/' + correction.link"
+                download
+                large
+              >
+                <v-icon left> mdi-folder-zip </v-icon>
+                {{ correction.title }}
+              </v-btn>
+            </v-col>
+          </v-row>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -110,9 +48,39 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import _ from 'lodash'
+
 export default {
+  data() {
+    return {
+      downloads: [],
+      correctionsActive: false,
+    }
+  },
   computed: {
-    ...mapGetters({ pages: 'getPages', module: 'getModule' }),
+    ...mapGetters({ module: 'getModule' }),
+  },
+  mounted() {
+    this.downloads = require.context('@/static/download/', true, /.pdf$/).keys()
+    this.corrections = require
+      .context('@/static/corrections/', true, /.zip$/)
+      .keys()
+    this.updateArray(this.downloads, this.module)
+    this.updateArray(this.corrections, this.module)
+  },
+  methods: {
+    updateArray: (array, module) => {
+      const elementsToDelete = []
+      array.forEach((element, index) => {
+        if (element.includes(module)) {
+          array[index] = {
+            title: element.match(/TP[\d^.*]/)[0],
+            link: element.match(/[^.].*/)[0],
+          }
+        } else elementsToDelete.push(array[index])
+      })
+      _.pullAll(array, elementsToDelete)
+    },
   },
 }
 </script>
