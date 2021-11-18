@@ -8,11 +8,21 @@
     <v-row align="center" justify="center">
       <v-col v-for="(item, i) in items" :key="i" cols="6">
         <v-card :color="item.color" :to="item.to" :disabled="item.inactive">
-          <v-avatar>
-            <v-icon x-large>{{ item.icon }}</v-icon>
-          </v-avatar>
-          <v-card-title class="text-h5" v-text="item.title"></v-card-title>
-          <v-card-subtitle v-text="item.description"></v-card-subtitle>
+          <v-container fluid
+            ><v-row
+              ><v-col cols="1"
+                ><v-avatar>
+                  <v-icon x-large>{{ item.icon }}</v-icon>
+                </v-avatar></v-col
+              ><v-col cols="10">
+                <v-card-title
+                  class="text-h5"
+                  v-text="item.title"
+                ></v-card-title>
+                <v-card-subtitle
+                  v-text="item.description"
+                ></v-card-subtitle></v-col></v-row
+          ></v-container>
         </v-card> </v-col></v-row
   ></v-container>
 </template>

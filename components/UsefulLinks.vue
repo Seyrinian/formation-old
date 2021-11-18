@@ -3,11 +3,21 @@
     <v-row justify="center">
       <v-col v-for="(item, i) in items[module]" :key="i" cols="5">
         <v-card :color="color" :href="item.link">
-          <v-avatar>
-            <v-icon x-large>{{ item.icon }}</v-icon>
-          </v-avatar>
-          <v-card-title class="text-h5" v-text="item.title"></v-card-title>
-          <v-card-subtitle v-text="item.description"></v-card-subtitle>
+          <v-container>
+            <v-row>
+              <v-col cols="1">
+                <v-avatar>
+                  <v-icon x-large>{{ item.icon }}</v-icon>
+                </v-avatar></v-col
+              ><v-col cols="11">
+                <v-card-title
+                  class="text-h5"
+                  v-text="item.title"
+                ></v-card-title>
+                <v-card-subtitle
+                  v-text="item.description"
+                ></v-card-subtitle></v-col></v-row
+          ></v-container>
         </v-card> </v-col
     ></v-row>
   </v-container>
