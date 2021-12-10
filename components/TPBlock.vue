@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       downloads: [],
-      correctionsActive: false,
+      correctionsActive: true,
     }
   },
   computed: {
