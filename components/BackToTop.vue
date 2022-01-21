@@ -29,8 +29,14 @@ export default {
         case 'php':
           color = variables.phpTertiaryColor
           break
-        case 'javascript':
-          color = variables.javascriptPrimaryColor
+        case 'vue':
+          color = variables.vuePrimaryColor
+          break
+        case 'git':
+          color = variables.gitPrimaryColor
+          break
+        case 'node':
+          color = variables.nodeTertiaryColor
           break
         default:
           color = ''

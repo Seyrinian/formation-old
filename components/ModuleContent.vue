@@ -30,6 +30,21 @@ export default {
   background-color: $--php-color-1;
 }
 
+#module-content.vue {
+  background-color: $--vue-color-2;
+}
+#module-content.vue a {
+  color: $--vue-color-1;
+}
+
+#module-content.node {
+  background-color: $--node-color-2;
+}
+
+#module-content.git {
+  background-color: $--git-color-2;
+}
+
 .nuxt-content h2 {
   text-align: center;
 }

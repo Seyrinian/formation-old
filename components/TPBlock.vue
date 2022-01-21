@@ -1,85 +1,88 @@
 <template>
-  <v-container id="tp-list" :class="module" fluid>
+  <v-container v-if="hasTP" id="tp-list" :class="module" fluid>
+    <h1 align="center">Travaux pratiques</h1>
     <v-row justify="center">
-      <v-col cols="10">
-        <v-row>
-          <v-col> <h1>Travaux pratiques</h1></v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <v-btn
-              v-for="download in downloads"
-              :key="download.title"
-              class="ma-2"
-              :href="'/formation/download/' + download.link"
-              download
-              large
-            >
-              <v-icon left> mdi-cloud-download </v-icon>
-              {{ download.title }}
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-divider></v-divider>
-        <div v-if="correctionsActive">
-          <v-row>
-            <v-col> <h1>Corrections</h1></v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <v-btn
-                v-for="correction in corrections"
-                :key="correction.title"
-                class="ma-2"
-                :href="'/formation/corrections/' + correction.link"
-                download
-                large
-              >
-                <v-icon left> mdi-folder-zip </v-icon>
-                {{ correction.title }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </div>
-      </v-col>
-    </v-row>
+      <v-col v-for="(item, i) in items[module]" :key="i" cols="5">
+        <v-card height="150px" :color="color" :href="item.link">
+          <v-container>
+            <v-row align="center">
+              <v-col cols="2" align="center">
+                <v-avatar>
+                  <v-icon x-large>{{ item.icon }}</v-icon>
+                </v-avatar></v-col
+              ><v-col cols="10">
+                <v-card-title
+                  class="text-h5"
+                  v-text="item.title"
+                ></v-card-title>
+                <v-card-subtitle
+                  v-text="item.description"
+                ></v-card-subtitle></v-col></v-row
+          ></v-container>
+        </v-card> </v-col
+    ></v-row>
   </v-container>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import _ from 'lodash'
+import variables from '../assets/sass/custom-variables.scss'
 
 export default {
-  data() {
-    return {
-      downloads: [],
-      correctionsActive: true,
-    }
-  },
+  data: () => ({
+    items: {
+      vue: [
+        {
+          title: 'Tuto - Partie 1 - Introduction à Vue',
+          description:
+            "Tutoriel complet permettant de voir la majorité des points de cours jusqu'au directives et découvrir le framework Vue",
+          icon: 'mdi-school',
+          link: 'https://classroom.github.com/a/1TDRmUjd',
+        },
+        {
+          title: 'Tuto - Partie 2 - Introduction à Vue CLI',
+          description:
+            'Tutoriel permettant de faire ses premières armes avec Vue CLI et de connecter une API',
+          icon: 'mdi-school',
+          link: 'https://classroom.github.com/a/7etjLAJi',
+        },
+        {
+          title: 'Projet Pokedex',
+          description:
+            "Création d'un Pokédex à l'aide de Vue avec plusieurs fonctionnalités (filtrage, liste, détails).",
+          icon: 'mdi-pokeball',
+          link: 'https://classroom.github.com/a/I9cwisSZ',
+        },
+      ],
+    },
+  }),
   computed: {
     ...mapGetters({ module: 'getModule' }),
-  },
-  mounted() {
-    this.downloads = require.context('@/static/download/', true, /.pdf$/).keys()
-    this.corrections = require
-      .context('@/static/corrections/', true, /.zip$/)
-      .keys()
-    this.updateArray(this.downloads, this.module)
-    this.updateArray(this.corrections, this.module)
-  },
-  methods: {
-    updateArray: (array, module) => {
-      const elementsToDelete = []
-      array.forEach((element, index) => {
-        if (element.includes(module)) {
-          array[index] = {
-            title: element.match(/TP[\d^.*]/)[0],
-            link: element.match(/[^.].*/)[0],
-          }
-        } else elementsToDelete.push(array[index])
-      })
-      _.pullAll(array, elementsToDelete)
+    hasTP() {
+      if (_.has(this.items, this.module)) return true
+      else return false
+    },
+    color() {
+      let color = ''
+      switch (this.module) {
+        case 'php':
+          color = variables.phpPrimaryColor
+          break
+        case 'node':
+          color = variables.nodePrimaryColor
+          break
+        case 'git':
+          color = variables.gitPrimaryColor
+          break
+        case 'vue':
+          color = variables.vueSecondaryColor
+          break
+        default:
+          color = ''
+          break
+      }
+      return color
     },
   },
 }
@@ -87,7 +90,12 @@ export default {
 
 <style lang="scss">
 @import '../assets/sass/custom-variables.scss';
+
 #tp-list.php {
   background-color: $--php-color-2;
+}
+
+#tp-list.vue {
+  background-color: $--vue-color-1;
 }
 </style>

@@ -2,9 +2,12 @@
   <v-container id="header" :class="module" fluid>
     <v-row>
       <v-col cols="10" dense>
-        <h1>{{ adaptHeading }}</h1>
-        <h2>FOURNY Valentin</h2>
-        <v-btn href="mailto:fourny.valentin@gmail.com" type="primary"
+        <h1>{{ heading }}</h1>
+        <h2 class="my-10">FOURNY Valentin</h2>
+        <v-btn
+          :color="color"
+          href="mailto:fourny.valentin@gmail.com"
+          type="primary"
           >Contacter l'enseignant</v-btn
         >
       </v-col>
@@ -14,23 +17,41 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import variables from '../assets/sass/custom-variables.scss'
 export default {
+  data: () => ({
+    heading: '',
+    color: '',
+  }),
   computed: {
     ...mapGetters({ module: 'getModule' }),
-    adaptHeading() {
-      let heading = ''
+  },
+  mounted() {
+    this.adaptModule()
+  },
+  methods: {
+    adaptModule() {
       switch (this.module) {
         case 'php':
-          heading = 'Programmation orientée côté serveur'
+          this.heading = 'Programmation orientée côté serveur'
+          this.color = variables.phpSecondaryColor
           break
-        case 'javascript':
-          heading = 'Programmation orientée côté client'
+        case 'vue':
+          this.heading = 'Formation Vue et Single Page Application'
+          this.color = variables.vuePrimaryColor
+          break
+        case 'git':
+          this.heading = 'Tutoriel Git'
+          this.color = variables.gitPrimaryColor
+          break
+        case 'node':
+          this.heading = 'NodeJS et Rest API'
+          this.color = variables.nodePrimaryColor
           break
         default:
-          heading = ''
+          this.heading = ''
           break
       }
-      return heading
     },
   },
 }
@@ -41,6 +62,18 @@ export default {
 
 #header.php {
   background-color: $--php-color-1;
+}
+
+#header.vue {
+  background-color: $--vue-color-2;
+}
+
+#header.node {
+  background-color: $--node-color-2;
+}
+
+#header.git {
+  background-color: $--git-color-2;
 }
 
 #header {

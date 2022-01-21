@@ -1,12 +1,22 @@
 <template>
   <v-list id="side-menu" :class="module" nav dense two-line shaped>
-    <v-list-item to="#accueil">
+    <v-list-item to="/">
       <v-icon>mdi-home</v-icon>
       <v-list-item-content
-        ><v-list-item-title>Accueil</v-list-item-title></v-list-item-content
+        ><v-list-item-title
+          >Retour à l'Accueil</v-list-item-title
+        ></v-list-item-content
       >
     </v-list-item>
     <v-divider></v-divider>
+    <v-list-item to="#profile">
+      <v-icon>mdi-information</v-icon>
+      <v-list-item-content
+        ><v-list-item-title
+          >Informations</v-list-item-title
+        ></v-list-item-content
+      >
+    </v-list-item>
     <v-list-item to="#useful-links">
       <v-icon>mdi-link-variant</v-icon>
       <v-list-item-content
@@ -19,7 +29,7 @@
       <v-icon>mdi-tools</v-icon>
       <v-list-item-content
         ><v-list-item-title
-          >Travaux pratique</v-list-item-title
+          >Travaux pratique & corrections</v-list-item-title
         ></v-list-item-content
       >
     </v-list-item>
@@ -47,6 +57,18 @@ export default {
 
 #side-menu.php {
   background-color: $--php-color-2;
+}
+
+#side-menu.vue {
+  background-color: $--vue-color-1;
+}
+
+#side-menu.node {
+  background-color: $--node-color-1;
+}
+
+#side-menu.git {
+  background-color: $--git-color-1;
 }
 
 .v-list {

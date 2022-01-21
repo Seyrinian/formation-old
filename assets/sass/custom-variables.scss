@@ -3,13 +3,30 @@ $--php-color-1: #363862 !default;
 $--php-color-2: #696d9e !default;
 $--php-color-3: #b0b3d6 !default;
 
-// javascript variables
-$--javascript-color-1: #f0db4f !default;
-$--javascript-color-2: #323330 !default;
+// git variables
+$--git-color-1: #f1502f !default;
+$--git-color-2: #3e2c00 !default;
+$--git-color-3: #4e443c !default;
+
+// vue variables
+$--vue-color-1: #41b883 !default;
+$--vue-color-2: #35495e !default;
+
+// nodejs variables
+$--node-color-1: #303030 !default;
+$--node-color-2: #68a063 !default;
+$--node-color-3: #3c873a !default;
 
 :export {
-  javascriptPrimaryColor: $--javascript-color-1;
+  gitPrimaryColor: $--git-color-1;
+  gitSecondaryColor: $--git-color-2;
+  gitTertiaryColor: $--git-color-3;
+  vuePrimaryColor: $--vue-color-1;
+  vueSecondaryColor: $--vue-color-2;
   phpPrimaryColor: $--php-color-1;
   phpSecondaryColor: $--php-color-2;
   phpTertiaryColor: $--php-color-3;
+  nodePrimaryColor: $--node-color-1;
+  nodeSecondaryColor: $--node-color-2;
+  nodeTertiaryColor: $--node-color-3;
 }
