@@ -38,7 +38,7 @@ export default {
           description:
             "Tutoriel complet permettant de voir la majorité des points de cours jusqu'au directives et découvrir le framework Vue",
           icon: 'mdi-school',
-          link: 'https://classroom.github.com/a/1TDRmUjd',
+          link: 'https://classroom.github.com/a/W62XZvzt',
         },
         {
           title: 'Tuto - Partie 2 - Introduction à Vue CLI',
