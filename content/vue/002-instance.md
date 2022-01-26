@@ -68,6 +68,15 @@ const app = new Vue({
 })
 ```
 
+\*Remarque: Vous avez peut-être déjà vu les déclarations de fonctions fléchées (voir exemple ci-dessous). Il est fortement déconseillé d'utiliser ce typ de déclération pour les méthodes. En effet vous allez souvent avoir besoin du mot clé **_this_**, cependant une fonction fléchées est une fonction anonyme et this n'existe donc pas. Préférez la méthode habituelle.\*
+
+```javascript
+// exemple de déclaration de fonction fléchées
+    addAmount: (product1, product2) => {
+      return product1 + product2
+    },
+```
+
 ### Utilisation de data, computed ou method dans le template
 
 Lorsque nous voulons afficher nos données dans notre application web, Vue utilise la syntaxe entre deux accolades pour afficher le rendu des données.
