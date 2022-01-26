@@ -68,7 +68,7 @@ const app = new Vue({
 })
 ```
 
-\*Remarque: Vous avez peut-être déjà vu les déclarations de fonctions fléchées (voir exemple ci-dessous). Il est fortement déconseillé d'utiliser ce typ de déclération pour les méthodes. En effet vous allez souvent avoir besoin du mot clé **_this_**, cependant une fonction fléchées est une fonction anonyme et this n'existe donc pas. Préférez la méthode habituelle.\*
+_Remarque: Vous avez peut-être déjà vu les déclarations de fonctions fléchées (voir exemple ci-dessous). Il est fortement déconseillé d'utiliser ce typ de déclération pour les méthodes. En effet vous allez souvent avoir besoin du mot clé ***this***, cependant une fonction fléchées est une fonction anonyme et this n'existe donc pas. Préférez la méthode habituelle._
 
 ```javascript
 // exemple de déclaration de fonction fléchées
