@@ -4,6 +4,9 @@
       <v-col cols="10" dense>
         <h1>{{ heading }}</h1>
         <h2 class="my-10">FOURNY Valentin</h2>
+        <p v-if="module === 'git'">
+          <strong>Cours réalisé en collaboration avec Gabin CARON.</strong>
+        </p>
         <v-btn
           :color="color"
           href="mailto:fourny.valentin@gmail.com"

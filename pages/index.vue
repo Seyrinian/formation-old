@@ -69,7 +69,7 @@ export default {
         to: '/git',
         description:
           "Section dédiée à l'apprentissage et la pratique de GIT. Contient les liens d'installations et les commandes importantes.",
-        inactive: true,
+        inactive: false,
       },
     ],
   }),

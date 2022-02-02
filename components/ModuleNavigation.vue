@@ -25,7 +25,7 @@
         ></v-list-item-content
       >
     </v-list-item>
-    <v-list-item to="#tp-list">
+    <v-list-item v-if="module !== 'git'" to="#tp-list">
       <v-icon>mdi-tools</v-icon>
       <v-list-item-content
         ><v-list-item-title
