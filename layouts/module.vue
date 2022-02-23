@@ -30,6 +30,9 @@ export default {
       },
     },
   },
+  destroyed() {
+    this.setIsNavOpen(false)
+  },
   methods: {
     ...mapActions(['setIsNavOpen']),
   },
