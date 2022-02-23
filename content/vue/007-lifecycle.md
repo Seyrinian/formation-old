@@ -18,7 +18,7 @@ Il existe 3 étapes majeures dans le cycle de vie d'un composant :
 
 Ci-dessous vous trouverez un graphique complet du cycle de vie d'un composant. Vous trouverez d'ailleurs d'autres étapes moins communes que les 3 citées.
 
-![Cycle de vie d'un composant](./images/component-lifecycle.png)
+<article-image src="component-lifecycle.png" alt="component-lifecycle"></article-image>
 
 ### Les hooks de cycle de vie
 

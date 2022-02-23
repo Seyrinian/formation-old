@@ -2,8 +2,8 @@
   <v-container id="header" :class="module" fluid>
     <v-row>
       <v-col cols="10" dense>
-        <h1>{{ heading }}</h1>
-        <h2 class="my-10">FOURNY Valentin</h2>
+        <h1 class="text-h2 text-sm-h1">{{ heading }}</h1>
+        <h2 class="my-10 text-h5 text-sm-h2">FOURNY Valentin</h2>
         <p v-if="module === 'git'">
           <strong>Cours réalisé en collaboration avec Gabin CARON.</strong>
         </p>
@@ -83,13 +83,5 @@ export default {
   height: 100vh;
   padding-top: 30vh;
   padding-left: 10vh;
-}
-
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-size: 30px;
 }
 </style>

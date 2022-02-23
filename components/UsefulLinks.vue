@@ -2,10 +2,10 @@
   <v-container id="useful-links" fluid :class="module">
     <h1 align="center">Liens utiles</h1>
     <v-row justify="center">
-      <v-col v-for="(item, i) in items[module]" :key="i" cols="5">
+      <v-col v-for="(item, i) in items[module]" :key="i" cols="10" sm="5">
         <v-card
           justify="center"
-          height="150px"
+          :height="height"
           :color="color"
           :href="item.link"
         >
@@ -17,10 +17,11 @@
                 </v-avatar></v-col
               ><v-col cols="10">
                 <v-card-title
-                  class="text-h5"
+                  class="text-h6 text-sm-h5"
                   v-text="item.title"
                 ></v-card-title>
                 <v-card-subtitle
+                  class="d-none d-sm-flex"
                   v-text="item.description"
                 ></v-card-subtitle></v-col></v-row
           ></v-container>
@@ -153,6 +154,22 @@ export default {
           break
       }
       return color
+    },
+    height() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 'auto'
+        case 'sm':
+          return 200
+        case 'md':
+          return 150
+        case 'lg':
+          return 150
+        case 'xl':
+          return 150
+        default:
+          return '500'
+      }
     },
   },
 }

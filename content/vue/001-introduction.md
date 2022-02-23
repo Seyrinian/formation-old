@@ -22,7 +22,7 @@ La page ne se recharge à aucun moment de la procédure et ne transfère pas le 
 
 Dans une architecture MPA client/serveur traditionnelle, chaque clic de l’utilisateur déclenche une requête HTTP vers le serveur. Le résultat de cette nouvelle requête est un rafraîchissement complet de la page, même si une partie du contenu reste inchangée. C'est le cas d'applications basée sur PHP par exemple.
 
-![Différence du cycle de vie SPA et MPA](./images/page-lifecycle.png)
+<article-image src="page-lifecycle.png" alt="page-lifecycle"></article-image>
 
 #### Avantages d'une SPA ?
 

@@ -1,6 +1,7 @@
 <template>
   <v-row>
     <v-col>
+      <MenuButton class="d-flex d-sm-none" />
       <Profil />
       <UsefulLinks />
       <TPBlock />

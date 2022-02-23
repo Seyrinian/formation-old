@@ -1,12 +1,12 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-row
       ><v-col><h1>Choisissez votre module</h1></v-col></v-row
     >
     <v-row align="center">
-      <v-col v-for="(item, i) in items" :key="i" cols="6">
+      <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6">
         <v-card
-          height="150px"
+          :height="height"
           :color="item.color"
           :to="item.to"
           :disabled="item.inactive"
@@ -23,6 +23,7 @@
                   v-text="item.title"
                 ></v-card-title>
                 <v-card-subtitle
+                  class="d-none d-sm-flex"
                   v-text="item.description"
                 ></v-card-subtitle></v-col></v-row
           ></v-container>
@@ -73,5 +74,23 @@ export default {
       },
     ],
   }),
+  computed: {
+    height() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 'auto'
+        case 'sm':
+          return 200
+        case 'md':
+          return 150
+        case 'lg':
+          return 150
+        case 'xl':
+          return 150
+        default:
+          return '500'
+      }
+    },
+  },
 }
 </script>
