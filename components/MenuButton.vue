@@ -1,11 +1,11 @@
 <template>
-  <v-btn fab fixed top right :color="color">
+  <v-btn fab fixed top right :color="color" @click="openMenu">
     <v-icon>mdi-menu</v-icon>
   </v-btn>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import variables from '../assets/sass/custom-variables.scss'
 
 export default {
@@ -13,7 +13,7 @@ export default {
     fab: false,
   }),
   computed: {
-    ...mapGetters({ module: 'getModule' }),
+    ...mapGetters({ module: 'getModule', isNavOpen: 'getIsNavOpen' }),
     color() {
       let color = ''
       switch (this.module) {
@@ -37,13 +37,10 @@ export default {
     },
   },
   methods: {
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
+    ...mapActions(['setIsNavOpen']),
+    openMenu() {
+      console.log(this.isNavOpen)
+      this.setIsNavOpen(!this.isNavOpen)
     },
   },
 }

@@ -1,6 +1,7 @@
 export const state = () => ({
   module:'',
-  pages:[]
+  pages:[],
+  isNavOpen:true
 })
 
 export const mutations = {
@@ -9,6 +10,9 @@ export const mutations = {
   },
   setPages(state, pages) {
     state.pages = pages
+  },
+  setIsNavOpen(state, isNavOpen){
+    state.isNavOpen = isNavOpen
   }
 }
 
@@ -18,6 +22,9 @@ export const actions = {
   },
   setPages(context,pages){
     context.commit('setPages',pages)
+  },
+  setIsNavOpen(context,isNavOpen){
+    context.commit('setIsNavOpen',isNavOpen)
   }
 }
 
@@ -27,5 +34,8 @@ export const getters = {
   },
   getPages(state){
     return state.pages
+  },
+  getIsNavOpen(state){
+    return state.isNavOpen
   }
 }
