@@ -1,7 +1,7 @@
 export const state = () => ({
   module:'',
   pages:[],
-  isNavOpen:true
+  isNavOpen:false
 })
 
 export const mutations = {

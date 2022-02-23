@@ -1,5 +1,5 @@
 <template>
-  <v-btn fab fixed top right :color="color" @click="openMenu">
+  <v-btn id="toggleMenu" fab fixed top left :color="color" @click="openMenu">
     <v-icon>mdi-menu</v-icon>
   </v-btn>
 </template>
@@ -39,8 +39,7 @@ export default {
   methods: {
     ...mapActions(['setIsNavOpen']),
     openMenu() {
-      console.log(this.isNavOpen)
-      this.setIsNavOpen(!this.isNavOpen)
+      this.setIsNavOpen(true)
     },
   },
 }
