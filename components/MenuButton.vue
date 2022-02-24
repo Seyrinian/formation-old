@@ -1,5 +1,5 @@
 <template>
-  <v-btn id="toggleMenu" fab fixed top left :color="color" @click="openMenu">
+  <v-btn id="toggleMenu" fab fixed bottom left :color="color" @click="openMenu">
     <v-icon>mdi-menu</v-icon>
   </v-btn>
 </template>
