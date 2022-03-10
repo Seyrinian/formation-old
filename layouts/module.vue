@@ -3,6 +3,7 @@
     <v-navigation-drawer
       v-model="drawerState"
       app
+      :mini-variant="!$vuetify.breakpoint.xs"
       :expand-on-hover="!isNavOpen"
       :bottom="$vuetify.breakpoint.xs"
       :temporary="$vuetify.breakpoint.xs"
@@ -29,6 +30,9 @@ export default {
         }
       },
     },
+  },
+  mounted(){
+    console.log(this.$vuetify.breakpoint.xs)
   },
   destroyed() {
     this.setIsNavOpen(false)

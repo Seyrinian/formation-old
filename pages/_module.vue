@@ -1,9 +1,5 @@
 <template>
-  <v-row>
-    <v-col>
       <ModulePage />
-    </v-col>
-  </v-row>
 </template>
 
 <script>
