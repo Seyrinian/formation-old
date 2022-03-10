@@ -31,9 +31,6 @@ export default {
       },
     },
   },
-  mounted(){
-    console.log(this.$vuetify.breakpoint.xs)
-  },
   destroyed() {
     this.setIsNavOpen(false)
   },
