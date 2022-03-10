@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors';
+import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -8,9 +8,10 @@ export default {
   target: 'static',
   router: {
     base: '/formation',
+    mode: 'history',
   },
-  static:{
-    prefix:false
+  static: {
+    prefix: false,
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
