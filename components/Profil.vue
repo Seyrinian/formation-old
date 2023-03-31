@@ -1,27 +1,87 @@
 <template>
-                <div class="container">
-                    <div class="hero-inner">
-						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Programmation orientée côté serveur</h1>
-	                        <h5 class="hero-title mt-0">FOURNY Valentin</h5>
-	                        <p class="hero-paragraph">Pages de synthèses des connaissances utiles au TP ainsi que quelques liens supplémentaires pour approfondir ses connaissances en PHP.</p>
-                            <a href="mailto:fourny.valentin@gmail.com"><el-button type="primary">Contacter l'enseignant</el-button></a>
-						</div>
-						<div class="hero-figure anime-element">
-							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
-								<rect width="528" height="396" style="fill:transparent;" />
-							</svg>
-							<div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
-							<div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
-							<div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
-							<div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
-							<div class="hero-figure-box hero-figure-box-05"></div>
-							<div class="hero-figure-box hero-figure-box-06"></div>
-							<div class="hero-figure-box hero-figure-box-07"></div>
-							<div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
-							<div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
-							<div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
-						</div>
-                    </div>
-                </div>
+  <v-container id="header" :class="module" fluid>
+    <v-row>
+      <v-col cols="10" dense>
+        <h1 class="text-h4 text-sm-h1">{{ heading }}</h1>
+        <h2 class="my-10 text-h6 text-sm-h2">FOURNY Valentin</h2>
+        <p v-if="module === 'git'">
+          <strong>Cours réalisé en collaboration avec Gabin CARON.</strong>
+        </p>
+        <v-btn
+          :color="color"
+          href="mailto:fourny.valentin@gmail.com"
+          type="primary"
+          >Contacter l'enseignant</v-btn
+        >
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+import variables from '../assets/sass/custom-variables.scss'
+export default {
+  data: () => ({
+    heading: '',
+    color: '',
+  }),
+  computed: {
+    ...mapGetters({ module: 'getModule' }),
+  },
+  mounted() {
+    this.adaptModule()
+  },
+  methods: {
+    adaptModule() {
+      switch (this.module) {
+        case 'php':
+          this.heading = 'Programmation orientée côté serveur'
+          this.color = variables.phpSecondaryColor
+          break
+        case 'vue':
+          this.heading = 'Formation Vue et Single Page Application'
+          this.color = variables.vuePrimaryColor
+          break
+        case 'git':
+          this.heading = 'Tutoriel Git'
+          this.color = variables.gitPrimaryColor
+          break
+        case 'node':
+          this.heading = 'NodeJS et Rest API'
+          this.color = variables.nodePrimaryColor
+          break
+        default:
+          this.heading = ''
+          break
+      }
+    },
+  },
+}
+</script>
+
+<style lang="scss">
+@import '../assets/sass/custom-variables.scss';
+
+#header.php {
+  background-color: $--php-color-1;
+}
+
+#header.vue {
+  background-color: $--vue-color-2;
+}
+
+#header.node {
+  background-color: $--node-color-2;
+}
+
+#header.git {
+  background-color: $--git-color-2;
+}
+
+#header {
+  height: 100vh;
+  padding-top: 30vh;
+  padding-left: 10vh;
+}
+</style>
