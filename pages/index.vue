@@ -44,7 +44,7 @@ export default {
         to: '/node',
         description:
           "Section dédiée à l'apprentissage et la pratique de NodeJS avec la gestion d'un backend, d'une API Rest et d'Express JS.",
-        inactive: true,
+        inactive: false,
       },
       {
         color: variables.vuePrimaryColor,

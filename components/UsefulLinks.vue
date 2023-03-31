@@ -130,6 +130,48 @@ export default {
           link: 'https://github.com/',
         },
       ],
+      node: [
+         {
+          title: 'Node JS',
+          description:
+            "Installer de l'application NodeJS. Utile pour installer VUE en mode CLI. Le gestionnaire de package NPM est compris avec.",
+          icon: 'mdi-nodejs',
+          link: 'https://nodejs.org/fr/',
+        },
+        {
+          title: 'Documentation NodeJS',
+          description: 'Documentation officielle de NodeJs.',
+          icon: 'mdi-nodejs',
+          link: 'https://nodejs.org/docs/latest-v18.x/api/',
+        },
+        {
+          title: 'Documentation Express',
+          description: 'Documentation officielle d\'Express.',
+          icon: 'mdi-api',
+          link: 'https://expressjs.com/fr/',
+        },
+        //  {
+        //   title: 'Dépôt Github',
+        //   description:
+        //     'Vous pousserez sur ce dépôt vos différents TP. Un dépôt par élève a été prévu à cet effet.',
+        //   icon: 'mdi-github',
+        //   link: 'https://classroom.github.com/',
+        // },
+         {
+          title: 'Postman',
+          description:
+            "Outil permettant d'exécuter des requêtes HTTP et d'analyser leur réponse en détail. Très pratique lorsqu'il s'agit de tester des API",
+          icon: 'mdi-rocket-launch',
+          link: 'https://www.postman.com/downloads/',
+        },
+        // {
+        //   title: 'Postman',
+        //   description:
+        //     "Outil permettant d'exécuter des requêtes HTTP et d'analyser leur réponse en détail. Très pratique lorsqu'il s'agit de tester des API",
+        //   icon: 'mdi-rocket-launch',
+        //   link: 'https://www.postman.com/downloads/',
+        // },
+      ],
     },
   }),
   computed: {

@@ -56,6 +56,15 @@ export default {
           link: 'https://classroom.github.com/a/I9cwisSZ',
         },
       ],
+      node: [
+        {
+          title: 'Introduction à NodeJS et Express',
+          description:
+            "Tutoriel permettant de faire ses premières armes avec NodeJS, les packages et une initiations au routing d'express",
+          icon: 'mdi-school',
+          link: 'https://classroom.github.com/a/Se0aLbm9',
+        },  
+      ],
     },
   }),
   computed: {
