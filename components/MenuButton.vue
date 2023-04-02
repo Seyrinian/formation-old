@@ -29,6 +29,9 @@ export default {
         case 'node':
           color = variables.nodeTertiaryColor
           break
+        case 'test':
+          color= variables.testPrimaryColor
+          break
         default:
           color = ''
           break

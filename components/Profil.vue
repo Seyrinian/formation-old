@@ -51,6 +51,10 @@ export default {
           this.heading = 'NodeJS et Rest API'
           this.color = variables.nodePrimaryColor
           break
+        case 'test':
+          this.heading = 'Testing et intégration continue'
+          this.color = variables.testPrimaryColor
+          break
         default:
           this.heading = ''
           break
@@ -77,6 +81,14 @@ export default {
 
 #header.git {
   background-color: $--git-color-2;
+}
+
+#header.test {
+  background-color: $--test-color-2;
+}
+
+#header.test span{
+  color:black
 }
 
 #header {

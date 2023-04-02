@@ -71,6 +71,14 @@ export default {
   background-color: $--git-color-1;
 }
 
+#side-menu.test {
+  background-color: $--test-color-1;
+}
+
+#side-menu.test a, #side-menu.test i{
+  color:black
+}
+
 .v-list {
   height: 100%;
   z-index: 1;

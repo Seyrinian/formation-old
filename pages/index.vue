@@ -38,7 +38,7 @@ export default {
   data: () => ({
     items: [
       {
-        color: variables.nodePrimaryColor,
+        color: variables.nodeSecondaryColor,
         icon: 'mdi-nodejs',
         title: 'Node JS',
         to: '/node',
@@ -70,6 +70,15 @@ export default {
         to: '/git',
         description:
           "Section dédiée à l'apprentissage et la pratique de GIT. Contient les liens d'installations et les commandes importantes.",
+        inactive: false,
+      },
+      {
+        color: variables.testSecondaryColor,
+        icon: 'mdi-git',
+        title: 'Test',
+        to: '/test',
+        description:
+          "Apprentissage du testing et suivi de notre projet avec l'intégration continue.",
         inactive: false,
       },
     ],

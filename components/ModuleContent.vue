@@ -45,6 +45,11 @@ export default {
   background-color: $--git-color-2;
 }
 
+#module-content.test {
+  background-color: $--test-color-2;
+}
+
+
 .nuxt-content h2 {
   text-align: center;
 }

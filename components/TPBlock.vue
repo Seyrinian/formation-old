@@ -88,6 +88,9 @@ export default {
         case 'vue':
           color = variables.vueSecondaryColor
           break
+        case 'test':
+          color = variables.testSecondaryColor
+          break
         default:
           color = ''
           break
