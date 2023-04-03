@@ -6,6 +6,7 @@
     <v-row align="center">
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6">
         <v-card
+        :style="{color:item.to==='/test'?'black':'white'}"
           :height="height"
           :color="item.color"
           :to="item.to"
@@ -15,7 +16,8 @@
             ><v-row align="center"
               ><v-col cols="2 " align="center"
                 ><v-avatar>
-                  <v-icon x-large>{{ item.icon }}</v-icon>
+                  <v-icon x-large 
+        :style="{color:item.to==='/test'?'black':'white'}">{{ item.icon }}</v-icon>
                 </v-avatar></v-col
               ><v-col cols="10">
                 <v-card-title
@@ -73,8 +75,8 @@ export default {
         inactive: false,
       },
       {
-        color: variables.testSecondaryColor,
-        icon: 'mdi-git',
+        color: variables.testPrimaryColor,
+        icon: 'mdi-test-tube',
         title: 'Test',
         to: '/test',
         description:

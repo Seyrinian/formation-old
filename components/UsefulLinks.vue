@@ -150,13 +150,6 @@ export default {
           icon: 'mdi-api',
           link: 'https://expressjs.com/fr/',
         },
-        //  {
-        //   title: 'Dépôt Github',
-        //   description:
-        //     'Vous pousserez sur ce dépôt vos différents TP. Un dépôt par élève a été prévu à cet effet.',
-        //   icon: 'mdi-github',
-        //   link: 'https://classroom.github.com/',
-        // },
          {
           title: 'Postman',
           description:
@@ -164,13 +157,22 @@ export default {
           icon: 'mdi-rocket-launch',
           link: 'https://www.postman.com/downloads/',
         },
-        // {
-        //   title: 'Postman',
-        //   description:
-        //     "Outil permettant d'exécuter des requêtes HTTP et d'analyser leur réponse en détail. Très pratique lorsqu'il s'agit de tester des API",
-        //   icon: 'mdi-rocket-launch',
-        //   link: 'https://www.postman.com/downloads/',
-        // },
+      ],
+      test: [
+         {
+          title: 'Node JS',
+          description:
+            "Installer de l'application NodeJS. Utile pour installer VUE en mode CLI. Le gestionnaire de package NPM est compris avec.",
+          icon: 'mdi-nodejs',
+          link: 'https://nodejs.org/fr/',
+        },
+         {
+          title: 'Documentation Jest',
+          description:
+            'Documentation du framework de test Jest',
+          icon: 'mdi-test-tube',
+          link: 'https://jestjs.io/docs/getting-started',
+        },
       ],
     },
   }),
@@ -190,6 +192,9 @@ export default {
           break
         case 'vue':
           color = variables.vueSecondaryColor
+          break
+          case 'test':
+          color = variables.testPrimaryColor
           break
         default:
           color = ''
@@ -230,5 +235,13 @@ export default {
 
 #useful-links.git {
   background-color: $--git-color-3;
+}
+
+#useful-links.test {
+  background-color: $--test-color-2;
+}
+
+#useful-links.test a,#useful-links.test i{
+  color:black
 }
 </style>
