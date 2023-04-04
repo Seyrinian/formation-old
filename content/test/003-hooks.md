@@ -1,16 +1,20 @@
 ---
 title: Hooks
-icon: mdi-test-tube
+icon: mdi-hook
 link: hooks
 ---
 
 <div id='hooks'></div>
+
+## Couverture et git hook
 
 ### Coverage
 
 Le coverage ou couverture de code est une fonction qui permet de s'assurer que notre code est correctement testée en vérifiant via un pourcentage.
 
 Pour ajouter le coverage dans vos test il suffit d'ajouter le suffixe *coverage* à votre commande `jest --coverage`.
+
+Vous trouverez le résultat du coverage dans le dossier `coverage/index.html`.
 
 #### Seuil de couverture
 
@@ -31,9 +35,9 @@ Vous pouvez ensuite définir la valeur minimale de coverage pour que les tests s
 
 *Remarque: Vous pouvez aussi créer un fichier de configuration à part: **config.jest.js***.
 
-### Husky et hook de précommit
+### Husky et git hook
 
-Les hooks sont une des fonctionnalités de git qui permettent d'executer des instructions avant certaines actions git (push, pull, ...).
+Les hooks sont une des fonctionnalités de git qui permettent d'executer des instructions avant certaines actions git (push, pull, commit, ...).
 
 #### Husky
 

@@ -1,12 +1,12 @@
 ---
 title: Conventionnal commit
-icon: mdi-test-tube
+icon: mdi-source-commit
 link: commit
 ---
 
 <div id='commit'></div>
 
-### Conventionnal commit
+## Conventionnal commit
 
 Conventionnal commit est une spécification d'écriture qui impose aux utilisateurs de geestionnaire de versionning comme **git** de respecter une certaine casse. En effet dans un projet on peut rapidement se retrouver à plusieurs et chacun peut avoir ses habitudes quand à l'écriture des commit. Le conventionnal commit permet de garder une structure de commit et donc de faciliter la lecture de ces derniers pour l'entiereté du groupe une fois que cette habitude a été acquise.
 
