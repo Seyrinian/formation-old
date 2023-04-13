@@ -31,7 +31,7 @@ app.get('/user', function (req, res) {
 
 ```
 
-*Le raisonnement reste similaire avec les autres type de requête mais chacun avec sa propre fonction que vous pouvez retrouver en détail dans la doc d'Express*
+*Le raisonnement reste similaire avec les autres type de requête mais chacun avec sa propre fonction que vous pouvez retrouver en détail dans la doc d'Express.*
 
 ---
 
