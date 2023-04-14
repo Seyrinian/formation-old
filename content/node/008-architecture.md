@@ -31,7 +31,7 @@ const listDogs = ()=>{
   return dogModel.find()
 }
 
-module.exports {listDog}
+module.exports = {listDog}
 ```
 
 Désormais je peux **require** mon module dans un autre fichier et appeler les fonctions exportées comme suis:
