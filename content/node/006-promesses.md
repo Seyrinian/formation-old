@@ -1,6 +1,6 @@
 ---
 title: Promesses
-icon: mdi-database
+icon: mdi-handshake
 link: promises
 ---
 
