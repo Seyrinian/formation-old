@@ -58,11 +58,18 @@ export default {
       ],
       node: [
         {
-          title: 'Introduction à NodeJS et Express',
+          title: 'Tutoriel',
           description:
-            "Tutoriel permettant de faire ses premières armes avec NodeJS, les packages et une initiations au routing d'express",
+            "Tutoriel permettant de découvrir NodeJS, les packages et Express",
           icon: 'mdi-school',
           link: 'https://classroom.github.com/a/Se0aLbm9',
+        },  
+        {
+          title: 'API Pokémon partie 1',
+          description:
+            "Réalisation d'une API Pokémon à l'aide de routes, modèles NoSQL, controlleurs et JWT",
+          icon: 'mdi-pokeball',
+          link: '/pdf/api-pokedex-1.pdf',
         },  
       ],
     },
@@ -80,7 +87,7 @@ export default {
           color = variables.phpPrimaryColor
           break
         case 'node':
-          color = variables.nodePrimaryColor
+          color = variables.nodeSecondaryColor
           break
         case 'git':
           color = variables.gitPrimaryColor
@@ -126,5 +133,9 @@ export default {
 
 #tp-list.vue {
   background-color: $--vue-color-1;
+}
+
+#tp-list.node {
+  background-color: $--node-color-1;
 }
 </style>

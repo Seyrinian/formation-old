@@ -185,7 +185,7 @@ export default {
           color = variables.phpPrimaryColor
           break
         case 'node':
-          color = variables.nodePrimaryColor
+          color = variables.nodeSecondaryColor
           break
         case 'git':
           color = variables.gitPrimaryColor
@@ -235,6 +235,10 @@ export default {
 
 #useful-links.git {
   background-color: $--git-color-3;
+}
+
+#useful-links.node {
+  background-color: $--node-color-1;
 }
 
 #useful-links.test {
