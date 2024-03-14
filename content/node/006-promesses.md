@@ -18,7 +18,9 @@ Basiquement nous codons en synchrone c'est à dire que chaque opération s'execu
 
 ```javascript
 let name=''
-setTimeout(()=>name='Valentin',5000)
+setTimeout(()=>{
+  name='Valentin'
+},5000)
 console.log(name)
 // affichera name: ''
 ```
@@ -29,11 +31,11 @@ Lorsque notre code nécessite le résultat d'une fonction qui s'avère longue à
 
 ### Promesses
 
-Pour résoudre l'asynchrone nous pourrions enchaîner des appels de callback, cependant cela devient très vite illisible et complexe à lire. Les promesses permettent une gestion plus claire de cet état.
-
-Avec les promesses vous avez la possibilité de chaîner les opérations asynchrones. Ca permet de les écrire les unes en dessous des autres et de les exécuter les unes après les autres. Comprenez bien que c'est dans le traitement de la réussite d'une opération asynchrone que la suivante est lancée. 
+Avec les promesses vous avez la possibilité de chaîner les opérations asynchrones. Cela permet de les écrire les unes en dessous des autres et de les exécuter les unes après les autres.
 
 Une promesse est un objet qui représente la complétion ou l'échec d'une opération asynchrone. Pour déclarer une promesse il faut que la fonction que vous souhaitez être asynchrone renvoie un objet de type `Promesse`. Cette promesse prend en paramètre une fonction callback qui elle même peut prendre plusieurs paramètres donc les principaux sont `resolve` et `reject`. Lorsque toutes les actions de notre callback sont terminés on effectue `resolve()` ou `reject()` dans lequel on peut passer en paramètre une variable.
+
+*Rappel : Une fonction callback, souvent simplement appelée callback, est une fonction passée en tant qu'argument à une autre fonction. La fonction qui reçoit la fonction callback peut alors invoquer cette fonction à un moment donné, généralement en réponse à un événement ou à une condition remplie dans son propre processus.*
 
 Si vous observez la promesse elle peut avoir plusieurs états:
 
@@ -44,22 +46,21 @@ Si vous observez la promesse elle peut avoir plusieurs états:
 Pour gérer l'état `fullfiled` de votre promesse vous devez utiliser le chaînage avec `then`. Pour gérer l'état `rejected` vous devez utiliser `catch`.
 
 ```javascript
-const promesse = new Promise((resolve,reject)=>{
-  const random = Math.trunc(Math.random()*10)
-  if(random <=> 5) resolve("Entre 0 et 5)
-  else reject("Entre 6 et 9")
-})
+let name = '';
 
-promesse
-  .then((txt)=>{
-  console.log(txt)
-  })
-  .catch((err)=>{
-    console.log(err)
-  })
+function setNameAfterDelay() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+          name='Valentin'
+          resolve();
+        }, 5000); // Délai de 5 secondes
+    });
+}
 
-// Renvoie un entier aléatoire tronqué allant de 0 à 9.
-console.log(Math.trunc(Math.random()*10))
+setNameAfterDelay()
+    .then((result) => {
+        console.log(name); // Affichera "Valentin" après 5 secondes
+    });
 ```
 
 ---

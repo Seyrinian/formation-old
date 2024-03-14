@@ -12,34 +12,30 @@ Maintenant que les bases de Node et de la gestion d'API sont acquises il va êtr
 
 ### Exporter un module
 
-La première chose que nous pourrions imaginer serait de découper notre projet en plusieurs fichiers que l'on placerait dans un dossier `src`. POn peut exporter les fonctions, valeurs, (...) avec `module.exports`.
-Par exemple je cherche à exporter la fonction `dogList()` contenant mon instance de base de données dans un fichier `dog.model.js`.
+La première chose que nous pourrions imaginer serait de découper notre projet en plusieurs fichiers que l'on placerait dans un dossier `src`. On peut exporter les fonctions, valeurs, (...) avec `module.exports`.
+Par exemple je cherche à exporter la logique de connexion à ma base de donnée dans un fichier `db.js`.
 
 ```javascript
-const mongoose = require('mongoose');
+const sqlite3 = require('sqlite3')
 
-const dogSchema = mongoose.Schema({
-  name: { type: String, required: true },
-  race: { type: String },
-  idNumber: { type: Number, required: true },
-  weight: {type:Number}
-});
+let db = new sqlite3.Database('db/pokedex.sqlite', (err) => {
+  if (err) {
+    throw err.message
+  }
+  console.log('Connected to the pokedex.sqlite database.');
+})
 
-const dogModel = mongoose.model('Dog', dogSchema);
-
-const listDogs = ()=>{
-  return dogModel.find()
-}
-
-module.exports = {listDog}
+module.exports = {db}
 ```
 
 Désormais je peux **require** mon module dans un autre fichier et appeler les fonctions exportées comme suis:
 
 ```javascript
-const DogModel = require('./dog.model.js')
+const {db} = require('./dog.model.js')
 
-DogModel.listDog()
+db.all('SELECT * FROM dogs', (err, row) => {
+  console.log(row);
+});
 ```
 
 ### Structurer l'application
@@ -55,6 +51,7 @@ src
 │   ├── *.model.js
 │   └── *.controller.js
 │   └── *.route.js
+└── db.js
 └── index.js
 ```
 

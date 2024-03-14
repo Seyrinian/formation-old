@@ -12,7 +12,7 @@ link: express
 
 Express est un framework qui permet de faciliter la création de serveur http. En effet nous pourrions créer notre propre serveur web de A à Z en redéfinissant chaque méthode HTTP, chaque route possible mais il faut l'avouer Express mâche tellement le travail des développeur qu'il est devenu un incontournable à connaître pour le milieu du backend NodeJS. 
 
-A moins de travailler sur des projets extrêmement spécifique, il y a peu de chances que vous ne passez pas par un framework comme Express, Nest ou autre.
+A moins de travailler sur des projets extrêmement spécifique, il y a peu de chances que vous ne passiez pas par un framework comme Express, Nest ou autre.
 
 Pour commencer nous allons installer express avec la commande `npm install express`.
 

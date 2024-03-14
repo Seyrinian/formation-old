@@ -65,7 +65,9 @@ node index.js
 ```
 
 La commande node execute le fichier précisé à la suite, qui va rendre un serveur sur le port 3100: [http://localhost:3100/](http://localhost:3100/)
-En vous rendant à l'url vous vous rendez compte qu'on peut voir la réponse du serveur. On note aussi dans le code l'utilisation d'un **require** ce qui semble être une fonction externe.
+En vous rendant à l'url vous vous rendez compte qu'on peut voir la réponse du serveur. On note aussi dans le code l'utilisation d'un **require** qui permet d'utiliser une fonction externe.
+
+Nous détaillerons un peu plus tard le fonctionnement du package `http`.
 
 ### Package et dependencies
 
@@ -78,7 +80,8 @@ A terme votre application que vous développer peut elle-même être un package 
 - EsLint: permettant d'apporter du contrôle et de la qualité de code
 - nodemon: qui permet d'avoir des fonctions de hotreload
 
-Nous parlions plus tôt de NPM comme utilitaire de commande, il faut dire qu'en réalité NPM est plutôt un gestionnaire de paquet. En efet outre les commandes de création et gestion d'un projet Node vue plutôt il permet aussi la gestion des paquets. 
+Nous parlions plus tôt de NPM comme utilitaire de commande, il faut dire qu'en réalité NPM est plutôt un gestionnaire de paquet.
+
 Pour installer un paquet nous allons utiliser la commande suivante:
 
 ```javascript
@@ -93,15 +96,16 @@ Vous pourrez désormais utiliser vos paquets dans vos futurs fichier en importan
 
 ### Paquets globaux et locaux
 
-Il y a une différence à faire entre ces deux états. Un paquet installé avec `npm install` est installé localement. C'est à dire qu'il n'est accessible que dans le scope de notre projet. Et c'est uniquement une fois notre serveur node démarré que ce dernier pourra accéder aux différents package. Il faut comprendre par la que si vous cherchez à utiliser une fonction de package dans votre terminal (comme par exemple pour nodemon) elle ne sera pas accessible car votre terminal n'a pas accès au serveur tant qu'il n'est pas lancé.
+Il y a une différence à faire entre ces deux états. Un paquet installé avec `npm install` est installé localement. C'est à dire qu'il n'est accessible que dans le scope de notre projet. Et c'est uniquement une fois notre serveur node démarré que ce dernier pourra accéder aux différents packages. 
+Il faut comprendre par la que si vous cherchez à utiliser une fonction de package dans votre terminal (comme par exemple pour nodemon) elle ne sera pas accessible car votre terminal n'a pas accès au serveur tant qu'il n'est pas lancé.
 
 Pour utiliser un package dans votre terminal, il faut l'installer sur votre système d'exploitation directement et non pas dans un projet. Ce peut-être utile dans le cas ou vous avez besoin d'un package commun à plusieurs projets. Pour ce faire nous allons ajouter le suffixe -g à la commande d'installation : `npm install -g nom_du_package`.
 
-Vous pouvez ensuite vérifier la liste des package globaux installés grâce à la commande `npm list -g --depth-0`.
+Vous pouvez ensuite vérifier la liste des package globaux installés grâce à la commande `npm list -g`.
 
 ### Scripts
 
-Dans la section précedente nous disions que si nous voulions executer des package au lancement de notre application nous ne pouvions pas le faire localement. En effet si le terminal ne reconnait pas les package locaux, admettons qu'avant que mon serveur ne démarre je souhaiterai réaliser un formatage de fichier, ou justement utiliser le package nodemon pour le hotreaload mais uniquement dans mon projet.
+Dans la section précedente nous disions que si nous voulions executer des packages installés localement au lancement de notre application nous ne pouvions pas le faire depuis le terminal. Cependant au moment où mon serveur démarre je souhaiterai utiliser le package nodemon pour le hotreaload.
 
 Il y a en réalité une autre manière de contourner ce problème, il s'agit de la clé **scripts** du **package.json**. Dans cet objet, vous allez indiquer autant de clés que vous souhaitez de scripts. Vous pouvez par exemple créer un script *dev* qui correspondra à votre environnement de développement et un script *build* qui cherchera à publier votre application.
 

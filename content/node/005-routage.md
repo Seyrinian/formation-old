@@ -31,6 +31,34 @@ app.get('/user', function (req, res) {
 
 ```
 
+### Demander à notre serveur de créer une ressource via POST
+
+Pour créer une ressource nous allons utiliser la méthode POST. Cette méthode est utilisée pour envoyer des données au serveur. Par exemple, dans le cas d'un formulaire d'inscription, les données du formulaire seront envoyées au serveur avec une requête POST.
+
+```javascript
+app.post('/user', function (req, res) {
+  res.send(`Ajout de l'utilisateur ${req.body.name}`);
+});
+```
+
+#### Body Parser
+
+Vous pouvez avoir des soucis lorsque votre requête va essayer de lire votre body. Dans ce cas il faut utiliser un parser qui va formatter la chaîne de caractère reçue pour qu'elle soit interprêtable par Express: [body-parser](https://www.npmjs.com/package/body-parser).
+
+On va ensuite simplement ajouter un *middleware* à Express qui demandera d'utiliser ce parser
+
+```javascript
+const express = require('express')
+const bodyParser = require('body-parser');
+
+const app = express()
+app.use(bodyParser.text())
+
+app.post('/user', function (req, res) {
+  res.send(`Ajout de l'utilisateur ${req.body.name}`);
+});
+```
+
 *Le raisonnement reste similaire avec les autres type de requête mais chacun avec sa propre fonction que vous pouvez retrouver en détail dans la doc d'Express.*
 
 ---

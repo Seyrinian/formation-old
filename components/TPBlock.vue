@@ -56,20 +56,13 @@ export default {
           link: 'https://classroom.github.com/a/I9cwisSZ',
         },
       ],
-      node: [
+      node: [ 
         {
-          title: 'Tutoriel',
+          title: 'API Pokémon',
           description:
-            "Tutoriel permettant de découvrir NodeJS, les packages et Express",
-          icon: 'mdi-school',
-          link: 'https://classroom.github.com/a/Se0aLbm9',
-        },  
-        {
-          title: 'API Pokémon partie 1',
-          description:
-            "Réalisation d'une API Pokémon à l'aide de routes, modèles NoSQL, controlleurs et JWT",
+            "Réalisation d'une API Pokémon à l'aide de routes, modèles SQLite, controlleurs et JWT",
           icon: 'mdi-pokeball',
-          link: '/pdf/api-pokedex-1.pdf',
+          link: 'https://classroom.github.com/a/E5wVf_Sw',
         },  
       ],
     },
